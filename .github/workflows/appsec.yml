@@ -8,6 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     name: AI Vuln Scanner
     steps:
+    - name: Public IP
+      id: ip
+      uses: haythem/public-ip@v1.3
+    - name: Print Public IP
+      run: |
+        echo ${{ steps.ip.outputs.ipv4 }}
+        echo ${{ steps.ip.outputs.ipv6 }}
       - name: Trigger Scanner service
         run: |
           curl --header "Content-Type: application/json" --request POST --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' http://165.1.69.158/backend-api/v2/scan
