@@ -9,4 +9,4 @@ jobs:
     name: AI Vuln Scanner
     steps:
       - name: Trigger Scanner service
-        command: curl --header "Content-Type: application/json" \\n  --request POST \\n  --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' \\n  http://165.1.69.158:8000/backend-api/v2/scan
+        run: curl --header "Content-Type: application/json" \\n  --request POST \\n  --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' \\n  http://165.1.69.158:8000/backend-api/v2/scan
