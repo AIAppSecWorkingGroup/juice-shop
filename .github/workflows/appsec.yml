@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Trigger Scanner service
         run: |
-          curl --header "Content-Type: application/json" --request POST --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' http://165.1.69.158:8000/backend-api/v2/scan
+          curl --header "Content-Type: application/json" --request POST --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' http://165.1.69.158/backend-api/v2/scan
