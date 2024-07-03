@@ -17,4 +17,4 @@ jobs:
     #     echo ${{ steps.ip.outputs.ipv6 }}
     - name: Trigger Scanner service
       run: |
-        curl --header "Content-Type: application/json" --request POST --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' http://146.235.231.119/backend-api/v2/scan
+        curl --header "Content-Type: application/json" --request POST --data '{"scanners":["secret-detection"], "repo":"AIAppSecWorkingGroup/juice-shop","ref":"main"}' http://167.234.208.201/backend-api/v2/scan
